@@ -1,0 +1,149 @@
+#LIST(similar to array)
+'''but the difference is, list can hold any type of data '''
+''''''
+a= [1,34,72,5.4,"Raj",81,9.9]
+print(a)
+print(type(a))
+
+a.append("Anurag")
+print(a)
+
+Output-[1, 34, 72, 5.4, 'Raj', 81, 9.9]
+       <class 'list'>
+       [1, 34, 72, 5.4, 'Raj', 81, 9.9, 'Anurag']
+
+
+#Dictionary
+
+#key and value pairs
+s={1:"aishwarya",2:"saswitha"}
+print(s)
+
+#update - add new element with new key
+s.update({3:"Ruchi"})
+print(s)
+
+#update - update old element with old key
+s.update({1:"Aeiswarya"})
+print(s)
+
+Output-{1: 'aishwarya', 2: 'saswitha'}
+       {1: 'aishwarya', 2: 'saswitha', 3: 'Ruchi'}
+       {1: 'Aeiswarya', 2: 'saswitha', 3: 'Ruchi'}
+
+d = {1:"aishwarya" , 2:"Ankit" , 3:"Ruchi"}
+for x in d.keys():
+    print(x)
+    
+for x in d.values():
+    print(x)
+    
+t = int(input("Enter any key:"))
+print(d[t])
+
+Output-1
+       2
+       3
+       aishwarya
+       Ankit
+       Ruchi
+       Enter any key:5
+       ---------------------------------------------------------------------------
+       KeyError                                  Traceback (most recent call last)
+Cell In[13], line 9
+       6     print(x)
+       8 t = int(input("Enter any key:"))
+ ----> 9 print(d[t])
+
+       KeyError: 5
+
+d = {1:"aishwarya" , 2:"Ankit" , 3:"Ruchi"}
+t = int(input("Enter any key:"))
+#Exception Handling
+try:
+    print(d[t])
+except:
+    print("Key not Available")
+finally:
+    print("Code Executed")
+
+Output-Enter any key:4
+       Key not Available
+       Code Executed
+
+
+#Bubble Sort
+def bubble_sort(arr):
+    n = len(arr)
+
+    # Traverse through all array elements
+    for i in range(n):
+        # Last i elements are already in place, so we don't need to check them
+        for j in range(0, n-i-1):
+            # Swap if the element found is greater than the next element
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+
+# Example usage:
+my_list = [64, 34, 25, 12, 22, 11, 90]
+bubble_sort(my_list)
+
+print("Sorted array:", my_list)
+
+Output-Sorted array: [11, 12, 22, 25, 34, 64, 90]
+
+
+#Selection Sort
+def selection_sort(arr):
+    n = len(arr)
+
+    # Traverse through all array elements
+    for i in range(n):
+        # Find the minimum element in the unsorted part of the array
+        min_index = i
+        for j in range(i+1, n):
+            if arr[j] < arr[min_index]:
+                min_index = j
+
+        # Swap the found minimum element with the first element
+        arr[i], arr[min_index] = arr[min_index], arr[i]
+
+# Example usage:
+my_list = [64, 25, 12, 22, 11]
+selection_sort(my_list)
+
+print("Sorted array:", my_list)
+
+Output-Sorted array: [11, 12, 22, 25, 64]
+
+
+#Insertion Sort
+def insertion_sort(arr):
+    n = len(arr)
+
+    # Traverse through all array elements starting from the second element
+    for i in range(1, n):
+        key = arr[i]
+
+        # Move elements of arr[0..i-1] that are greater than key to one position ahead of their current position
+        j = i - 1
+        while j >= 0 and key < arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+
+        arr[j + 1] = key
+
+# Example usage:
+my_list = [12, 11, 13, 5, 6]
+insertion_sort(my_list)
+
+print("Sorted array:", my_list)
+
+Output-Sorted array: [5, 6, 11, 12, 13]
+​
+
+
+
+
+
+
