@@ -1,4 +1,5 @@
-'''def bubble_sort(arr):
+#bubble sorting
+def bubble_sort(arr):
     n = len(arr)
     for i in range(n):
         for j in range(0, n-i-1):
@@ -7,9 +8,10 @@
 
 arr = [4, 7, 8, 1, 9, 2, 3, 6, 5]
 bubble_sort(arr)
-print("Bubble Sort:", arr)'''
+print("Bubble Sort:", arr)
 
-'''def selection_sort(arr):
+#selection sorting
+def selection_sort(arr):
     n = len(arr)
     for i in range(n):
         min_idx = i
@@ -20,8 +22,9 @@ print("Bubble Sort:", arr)'''
 
 arr = [4, 7, 8, 1, 9, 2, 3, 6, 5]
 selection_sort(arr)
-print("Selection Sort:", arr)'''
+print("Selection Sort:", arr)
 
+#insertion sorting 
 def insertion_sort(arr):
     for i in range(1, len(arr)):
         key = arr[i]
