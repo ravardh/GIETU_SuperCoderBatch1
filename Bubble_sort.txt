@@ -1,0 +1,9 @@
+def bubble(arr):
+    n=len(arr)
+    for i in range (n-1):
+        for j in range(i,n):
+            if arr[i] > arr[j]:
+                arr[i],arr[j] = arr[j],arr[i]
+    return arr
+a=eval(input("Enter the list:"))
+bubble(a)

@@ -1,0 +1,12 @@
+def selection(arr):
+    n=len(arr)
+    for i in range(n):
+        min=i
+        for j in range(i+1,n):
+            if (arr[min]>arr[j]):
+                min=j
+            if (min != i):
+                arr[i],arr[min]=arr[min],arr[i]
+    return arr
+a=eval(input("Enter the list:"))
+selection(a)
