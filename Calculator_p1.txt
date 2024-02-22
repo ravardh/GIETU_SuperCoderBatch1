@@ -1,0 +1,18 @@
+num1 = int(input("Enter first number : "))
+num2 = int(input("Enter second number : "))
+op = input("Enter operator : ")
+match op:
+  case '+':
+    print("Sum = ",num1 + num2)
+  case '-':
+    print("Difference = ",num1 - num2)
+  case '*':
+    print("Product = ",num1 * num2)
+  case '/':
+    print("Division = ",num1 / num2)
+  case '//':
+    print("Floor Division = ",num1 // num2)
+  case '%':
+    print("Modulus = ",num1 % num2)
+  case _:
+    print("Invalid operation")
