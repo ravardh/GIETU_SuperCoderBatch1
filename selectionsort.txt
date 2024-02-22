@@ -1,0 +1,13 @@
+def selectionsort(arr):
+  n = len(arr)
+  for i in range(n):
+    min = i
+    for j in range(i + 1, n):
+      if(arr[min] > arr[j]):
+        min = j
+    if(min != i):
+      arr[i], arr[min] = arr[min], arr[i]
+  return arr
+
+arr = [32, 14, 44, 57, 12, 34, 89, 45]
+selectionsort(arr)
