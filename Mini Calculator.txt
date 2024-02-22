@@ -1,0 +1,11 @@
+num1=int(input("Enter a number:"))
+num2=int(input("Enter a number:"))
+op=input("Enter a operator:")
+match op:
+    case'+':print("sum=",num1+num2)
+    case'-':print("Sub=",num1-num2)
+    case'*':print("Product=",num1*num2)
+    case'/':print("Division=",num1/num2)
+    case'//':print("Floor Division=",num1//num2)
+    case'%':print("Modulus=",num1%num2)
+    case _:print("Invalid Symbol")
