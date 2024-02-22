@@ -1,0 +1,14 @@
+def insertionSort(L):
+    n = len(L)
+
+    for i in range(n):
+        key = L[i]
+        j = i - 1
+        while j >= 0 and key < L[j]:
+            L[j + 1] = L[j]
+            j -= 1
+        L[j + 1] = key
+
+A = [4, 8, 7, 1, 9, 2, 6, 5]
+insertionSort(A)
+print(A)

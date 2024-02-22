@@ -1,0 +1,14 @@
+def bubbleSort(L):
+    n = len(L)
+
+    for i in range(n):
+        swapped = False
+        for j in range(n - i - 1):
+            if L[j] > L[j + 1]:
+                L[j], L[j + 1] = L[j + 1], L[j]
+            swapped = True
+        if swapped == False: break
+
+A = [4, 8, 7, 1, 9, 2, 6, 5]
+bubbleSort(A)
+print(A)

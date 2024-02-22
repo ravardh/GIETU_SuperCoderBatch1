@@ -1,0 +1,12 @@
+def selectionSort(L):
+    n = len(L)
+
+    for i in range(n):
+        min = i
+        for j in range(i + 1, n):
+            if A[min] > A[j]: min = j
+        A[i], A[min] = A[min], A[i]
+
+A = [4, 8, 7, 1, 9, 2, 6, 5]
+selectionSort(A)
+print(A)
