@@ -1,0 +1,20 @@
+def find(ar,S,E):
+    p=ar[E]
+    j=S-1
+    for i in range(S,E):
+        if ar[i]<p:
+            j=j+1
+            ar[i],ar[j]=ar[j],ar[i]
+    ar[j+1],ar[E]=ar[E],ar[j+1]
+    return j+1
+
+def quickSort(ar,S,E):
+    if S<E:
+        pi=find(ar,S,E)
+        quickSort(ar,S,pi-1)
+        quickSort(ar,pi+1,E)
+        
+if __name__ == '__main__':
+    arr=[4,8,2,3,7,5,1,9,6]
+    quickSort(arr,0,len(arr)-1)
+    print(arr)
