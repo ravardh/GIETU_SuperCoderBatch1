@@ -1,0 +1,106 @@
+class Node:
+    def __init__(self, data=None):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+    def insert_at_beginning(self, data):
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node
+
+    def insert_at_end(self, data):
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        last_node = self.head
+        while last_node.next:
+            last_node = last_node.next
+        last_node.next = new_node
+
+    def insert_at_position(self, data, position):
+        if position == 0:
+            self.insert_at_beginning(data)
+            return
+        new_node = Node(data)
+        current = self.head
+        for _ in range(position - 1):
+            if current is None:
+                print("Position out of range")
+                return
+            current = current.next
+        if current is None:
+            print("Position out of range")
+            return
+        new_node.next = current.next
+        current.next = new_node
+
+    def delete_at_beginning(self):
+        if self.head is None:
+            print("List is empty")
+            return
+        self.head = self.head.next
+
+    def delete_at_end(self):
+        if self.head is None:
+            print("List is empty")
+            return
+        if self.head.next is None:
+            self.head = None
+            return
+        second_last = self.head
+        while second_last.next.next:
+            second_last = second_last.next
+        second_last.next = None
+
+    def delete_at_position(self, position):
+        if self.head is None:
+            print("List is empty")
+            return
+        if position == 0:
+            self.head = self.head.next
+            return
+        current = self.head
+        for _ in range(position - 1):
+            if current.next is None:
+                print("Position out of range")
+                return
+            current = current.next
+        if current.next is None:
+            print("Position out of range")
+            return
+        current.next = current.next.next
+
+    def display(self):
+        current = self.head
+        while current:
+            print(current.data, end=" ")
+            current = current.next
+        print()
+
+
+linked_list = LinkedList()
+linked_list.insert_at_end(1)
+linked_list.insert_at_end(2)
+linked_list.insert_at_end(3)
+linked_list.insert_at_end(4)
+linked_list.display()
+
+linked_list.insert_at_beginning(0)
+linked_list.display()
+
+linked_list.insert_at_position(5, 5)
+linked_list.display()
+
+linked_list.delete_at_beginning()
+linked_list.display()
+
+linked_list.delete_at_end()
+linked_list.display()
+
+linked_list.delete_at_position(2)
+linked_list.display()
