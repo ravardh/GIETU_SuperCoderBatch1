@@ -2,7 +2,7 @@
 ar=[int(x) for x in input("Enter the integers sep by commas:\n").split(",")]
 no=int(input("Enter how many consecutive elements to check:\n"))
 temp=min(ar)
-if(len(ar)>2):
+if(len(ar)>=no):
     for i in range(len(ar)-(no-1)):
         s=sum(ar[i:i+no])
         if(s>temp):
@@ -12,4 +12,4 @@ else:
     try:
        raise Exception()
     except Exception:
-        print("enter number of elements>=3")
+        print("enter number of elements>=no")
