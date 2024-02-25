@@ -13,8 +13,6 @@ class Node:
         return cur
     def ins_in_bet(self,pos,head):
         cur=head
-        prev=head
-        after=head
         for i in range(1,pos):
             before=cur
             cur=cur.next
