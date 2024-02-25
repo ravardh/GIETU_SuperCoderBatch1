@@ -1,0 +1,93 @@
+class Node:
+    def _init_(self, data):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+    def _init_(self):
+        self.head = None
+
+    def insert_at_beginning(self, data):
+        new = Node(data)
+        new.next = self.head
+        self.head = new
+
+    def insert_at_end(self, data):
+        new = Node(data)
+        if not self.head:
+            self.head = new
+            return
+        last = self.head
+        while last.next:
+            last = last.next
+        last.next = new
+
+    def insert_at_position(self, data, position):
+        if position == 0:
+            self.insert_at_beginning(data)
+            return
+        new = Node(data)
+        current = self.head
+        for _ in range(position - 1):
+            if current is None:
+                print("Position out of range")
+                return
+            current = current.next
+        if current is None:
+            print("Position out of range")
+            return
+        new.next = current.next
+        current.next = new
+
+    def delete_from_beginning(self):
+        if not self.head:
+            print("List is empty")
+            return
+        self.head = self.head.next
+
+    def delete_from_end(self):
+        if not self.head:
+            print("List is empty")
+            return
+        if not self.head.next:
+            self.head = None
+            return
+        second_last = self.head
+        while second_last.next.next:
+            second_last = second_last.next
+        second_last.next = None
+
+    def delete_node(self, key):
+        temp = self.head
+        if temp is not None:
+            if temp.data == key:
+                self.head = temp.next
+                temp = None
+                return
+        while temp is not None:
+            if temp.data == key:
+                break
+            prev = temp
+            temp = temp.next
+        if temp == None:
+            return
+        prev.next = temp.next
+        temp = None
+
+    def display(self):
+        current = self.head
+        while current:
+            print(current.data, end=" ")
+            current = current.next
+        print()
+
+
+if _name_ == "_main_":
+    linked_list = LinkedList()
+    linked_list.insert_at_beginning(1)
+    linked_list.insert_at_end(3)
+    linked_list.insert_at_position(2, 1)
+    linked_list.delete_from_beginning()
+    linked_list.delete_from_end()
+    linked_list.delete_node(2)
+    linked_list.display()
