@@ -1,62 +1,40 @@
-#!/usr/bin/env python
-# coding: utf-8
+class TreeNode:
+    def _init_(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 
-# In[2]:
+def left_side_view(root):
+    if not root:
+        return []
 
+    result = []
+    queue = [root]
 
-class Node:
- 
-    def __init__(self, data):
-        self.data = data
-        self.left = None
-        self.right = None
- 
- 
-def maxDepth(node):
-    if node is None:
-        return 0
- 
-    else:
- 
-        
-        lDepth = maxDepth(node.left)
-        rDepth = maxDepth(node.right)
- 
+    while queue:
+        level_size = len(queue)
+        for i in range(level_size):
+            node = queue.pop(0)
+            if i == 0:  # First node in the level (leftmost node)
+                result.append(node.val)
 
-        if (lDepth > rDepth):
-            return lDepth+1
-        else:
-            return rDepth+1
- 
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
 
-root = Node(1)
-root.left = Node(5)
-root.right = Node(7)
-root.left.left = Node(2)
-root.left.right = Node(4)
-root.right.right = Node(17)
-root.left.left.left = Node(20)
-root.left.right.left = Node(11)
-root.left.right.right = Node(3)
-root.right.right.left = Node(12)
-root.right.right.right = Node(16)
-root.left.left.left.right = Node(10)
-root.right.right.left.left = Node(14)
-root.right.right.left.right = Node(19)
-root.left.left.left.right.left = Node(21)
-root.right.right.left.right.right = Node(18)
-root.left.left.left.right.left.left = Node(13)
-root.right.right.left.right.right.right = Node(15)
+    return result
 
+root = TreeNode(9)
+root.left = TreeNode(7)
+root.right = TreeNode(1)
+root.left.right = TreeNode(4)
+root.left.left = TreeNode(6)
+root.left.left.right = TreeNode(5)
+root.right.left = TreeNode(3)
+root.right.left.left = TreeNode(11)
+root.right.right = TreeNode(2)
+root.right.left.right = TreeNode(12)
+root.right.left.right.right = TreeNode(17)
 
-
- 
- 
-print("Height of tree is %d" % (maxDepth(root)))
-
-
-# In[ ]:
-
-
-
-
+print(left_side_view(root))
