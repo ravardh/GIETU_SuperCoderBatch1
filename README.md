@@ -6,8 +6,8 @@
 ### 25/02/24 - Sunday
 ### 26/02/24 - Post Order, In Order, Pre Order, Level Order
 ### 27/02/24 - Height, TopDownView, Leaf Node
-### 28/02/24 - Left Tree, Right Tree, Construct Bst
-### 29/02/24 - 
+### 28/02/24 - Left Tree, Right Tree 
+### 29/02/24 - Construct Bst, Insert In Bst
 ### 01/03/24 - AVL Tree
 ### 02/03/24 - Adjacency list Graph
 ### 03/03/24 - Sunday 
