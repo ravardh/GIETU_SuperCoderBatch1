@@ -5,3 +5,4 @@
 ### Assignment 1- Insert at begin, insert at end, insert and a particular location (take data input from user and input after that), Delete from begin, Delete from End, Delete an specfic Node entered by user
 ### 27/02/24 - Height, TopDownView, Leaf Node
 ### 1/03/24 - AVL Tree
+### 2/03/24 - Adjacency list Graph
