@@ -3,7 +3,7 @@
 10,
 20
 
-`pip install flask`
+```pip install flask```
 
 ```python
 
