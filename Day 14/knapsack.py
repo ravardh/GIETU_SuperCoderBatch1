@@ -1,20 +1,17 @@
-def knapsack(wt, val, W, n):
-	t = [[-1 for i in range(W + 1)] for j in range(n + 1)] 
-	
-	# base conditions 
-	if n == 0 or W == 0: 
-		return 0
-	if t[n][W] != -1: 
-		return t[n][W] 
-
-	if wt[n-1] <= W: 
-		t[n][W] = max(val[n-1] + knapsack(wt, val, W-wt[n-1], n-1), knapsack(wt, val, W, n-1)) 
-		return t[n][W] 
-	elif wt[n-1] > W: 
-		t[n][W] = knapsack(wt, val, W, n-1) 
-		return t[n][W] 
+# DP Approach O(n*W)
+def knapSack(C, wt, P, n): 
+	dp = [[0 for x in range(C + 1)] for x in range(n + 1)] 
+	for i in range(n + 1): 
+		for w in range(C + 1): 
+			if i == 0 or w == 0: # Base case where no price is there or no capacity is there
+				dp[i][w] = 0
+			elif wt[i-1] <= w: # if w-wt[i-1] is positive
+				dp[i][w] = max(P[i-1] + dp[i-1][w-wt[i-1]], dp[i-1][w]) 
+			else:
+				dp[i][w] = dp[i-1][w] 
+	return dp[n][C]
 
 w = list(map(int, input("Enter Item Weight\n").strip().split()))
 p = list(map(int, input("Enter Item Price\n").strip().split()))
-W = int(input("Knapsack Size: "))
-print(knapsack(w, p, W, len(p)))
+C = int(input("Knapsack Size: "))
+print(knapSack(C, w, p, len(p)))
