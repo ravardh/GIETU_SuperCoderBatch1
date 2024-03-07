@@ -34,7 +34,7 @@ class Graph:
       
     # print the distance
     for i in self.graph:
-      print(f"Minimum Distance of vertice {i} from ")
+      print(f"Minimum Distance of vertice {i} from {node} is {path[i]}")
     
 
 g = Graph(9)
