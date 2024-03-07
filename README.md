@@ -18,4 +18,5 @@ Lectures Missed:
 
 | Day Number | Topic Studied          | Total Programs Written | Algorithm Name |   Resources Folder  |
 |------------|------------------------|------------------------|----------------|---------------------|
-| Day 13     | Graph Traversal   | 1                       | DFS     | [Link](./Day%213/) |
+| Day 13     | Graph Traversal, LeetCode Ques   | 1 + 2                       | DFS, 2pointer, greedy     | [Link](./Day%213/) |
+| Day 14     | Greedy & DP  | 1                       | 0/1 Knapsack     | [Link](./Day%214/) |
