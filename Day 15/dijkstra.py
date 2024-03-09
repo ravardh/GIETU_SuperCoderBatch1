@@ -18,26 +18,6 @@ class Graph:
       print(f"  {i}: {self.graph[i]}")
     print("}")
     
-  def min_path(self, node): # my approach
-    '''
-    min_path of all the others vertices from the start node
-    '''
-    # initially assume the minimum distance is infinity
-    path = [float('inf')] * (self.V + 1)  
-    path[node] = 0
-    for i in self.graph:
-      neighbour = self.graph[i]
-      # if direct edge is present between start and ith node it's the smallest
-      if node in neighbour:
-        path[i] = neighbour[node]
-      # update the neighbours of ith node with the minimum distance of neighbour and start node through ith node
-      for j in neighbour:
-        path[j] = min(path[j], path[i]+neighbour[j])
-      
-    # print the distance
-    for i in self.graph:
-      print(f"Minimum Distance of vertice {i} from {node} is {path[i]}")
-
   def dijsktra(self, start):  # Sir's approach
     d = {}
     # path = [0]*self.V
