@@ -20,3 +20,5 @@ Lectures Missed:
 |------------|------------------------|------------------------|----------------|---------------------|
 | Day 13     | Graph Traversal, LeetCode Ques   | 1 + 2                       | DFS, 2pointer, greedy     | [Link](./Day%213/) |
 | Day 14     | Greedy & DP  | 1                       | 0/1 Knapsack     | [Link](./Day%214/) |
+| Day 15     | Coding of Knapsack & Dijkstra  | 2                       | 0/1 Knapsack     | - |
+| Day 16     | Minimum path from nth node  | 1                       | Dijkstra Algorithm     | [Link](./Day%215/) |
