@@ -13,10 +13,12 @@ class Graph:
     self.graph[v][u] = w
 
   def print_graph(self):
+    print("{")
     for i in self.graph:
       print(f"{i}: {self.graph[i]}")
+    print("}")
     
-  def min_path(self, node): 
+  def min_path(self, node): # my approach
     '''
     min_path of all the others vertices from the start node
     '''
@@ -35,7 +37,30 @@ class Graph:
     # print the distance
     for i in self.graph:
       print(f"Minimum Distance of vertice {i} from {node} is {path[i]}")
-    
+
+  def dijsktra(self, start):  # Sir's approach
+    d = {}
+    path = [0]*self.V
+    path[start-1] = 0
+    k = start
+
+    for i in self.graph:
+      d[i] = float('inf')
+
+    while len(d.keys()):
+      v = path[k-1]
+      for i in self.graph[k]:
+        if i in d:
+          d[i] = min(d[i], v+self.graph[k][i])
+          path[i-1] = d[i]
+      del d[k]
+      if len(d):
+        # find the vertex with the least value in d
+        k = min(d, key=d.get)
+
+    # print the distance
+    for i in self.graph:
+      print(f"Minimum Distance of vertice {i} from {start} is {path[i-1]}")
 
 g = Graph(9)
 g.add_edge(1, 2, 4)
@@ -55,4 +80,5 @@ g.add_edge(8, 9, 7)
 
 g.print_graph()
 print()
-g.min_path(1)
+# g.min_path(1)
+g.dijsktra(3)
