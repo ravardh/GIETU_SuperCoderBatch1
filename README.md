@@ -22,3 +22,5 @@ Lectures Missed:
 | Day 14     | Greedy & DP  | 1                       | 0/1 Knapsack     | [Link](./Day%214/) |
 | Day 15     | Coding of Knapsack & Dijkstra  | 2                       | 0/1 Knapsack     | - |
 | Day 16     | Minimum path from nth node  | 1                       | Dijkstra Algorithm     | [Link](./Day%215/) |
+| Day 17     | Minimum path from nth node  | 1                       | Bellman Ford Algorithm     | [Link](./Day%217/) |
+| Day 18     | Cycle Detection, Job Scheduling  | 1                       | Modified DFS, Greedy     | [Link](./Day%218/) |

@@ -13,7 +13,16 @@ class Graph:
     for i in self.graph:
       print(f"  {i}: {self.graph[i]}")
     print("}")
-    
+  
+
+  ''' Algorithm for Bellman Ford [deals with -ve weight too]
+      Create the edge list
+      Initialize all vertex to infinity except source which is set to zero
+      
+      keep updating the minimum path of each vertex (V-1) times since it is proven after V times it will reach an optimum point
+        curr = path[source] # minimum value upto source until now
+        path[destination] = min(path[destination], curr+weight(source, destination))
+  '''
   def bellman_ford(self, start):  # Sir's approach
     edge_list = []
     for i in self.graph:

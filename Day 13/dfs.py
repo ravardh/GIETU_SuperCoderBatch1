@@ -18,8 +18,8 @@ class Graph:
     if start_vertex not in visited:
       visited.add(start_vertex)
       print(start_vertex, end=" ")
-      for child in self.graph[start_vertex]:
-        self.dfs(child, visited)
+      for neighbour in self.graph[start_vertex]:
+        self.dfs(neighbour, visited)
 
 g = Graph()
 g.add_edge(1, 2)
