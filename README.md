@@ -18,9 +18,9 @@ Lectures Missed:
 
 | Day Number | Topic Studied          | Total Programs Written | Algorithm Name |   Resources Folder  |
 |------------|------------------------|------------------------|----------------|---------------------|
-| Day 13     | Graph Traversal, LeetCode Ques   | 1 + 2                       | DFS, 2pointer, greedy     | [Link](./Day%213/) |
-| Day 14     | Greedy & DP  | 1                       | 0/1 Knapsack     | [Link](./Day%214/) |
+| Day 13     | Graph Traversal, LeetCode Ques   | 1 + 2                       | DFS, 2pointer, greedy     | [Link](./Day%2013/) |
+| Day 14     | Greedy & DP  | 1                       | 0/1 Knapsack     | [Link](./Day%2014/) |
 | Day 15     | Coding of Knapsack & Dijkstra  | 2                       | 0/1 Knapsack     | - |
-| Day 16     | Minimum path from nth node  | 1                       | Dijkstra Algorithm     | [Link](./Day%215/) |
-| Day 17     | Minimum path from nth node  | 1                       | Bellman Ford Algorithm     | [Link](./Day%217/) |
-| Day 18     | Cycle Detection, Job Scheduling  | 1                       | Modified DFS, Greedy     | [Link](./Day%218/) |
+| Day 16     | Minimum path from nth node  | 1                       | Dijkstra Algorithm     | [Link](./Day%2015/) |
+| Day 17     | Minimum path from nth node  | 1                       | Bellman Ford Algorithm     | [Link](./Day%2017/) |
+| Day 18     | Cycle Detection, Job Scheduling  | 1                       | Modified DFS, Greedy     | [Link](./Day%2018/) |
