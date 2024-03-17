@@ -8,7 +8,7 @@ def preorder(root: Node) -> None: # Root, Left, Right
   if root == None:
     return
   
-  print(root.data, end=" --> ")
+  print(root.data, end=" | ")
   preorder(root.left)
   preorder(root.right)
 
@@ -17,7 +17,7 @@ def inorder(root: Node) -> None: # Left, Root, Right
     return
   
   inorder(root.left)
-  print(root.data, end=" --> ")
+  print(root.data, end=" | ")
   inorder(root.right)
 
 def postorder(root: Node) -> None: # Left, Right, Root
@@ -26,7 +26,7 @@ def postorder(root: Node) -> None: # Left, Right, Root
   
   postorder(root.left)
   postorder(root.right)
-  print(root.data, end=" --> ")
+  print(root.data, end=" | ")
 
 ''' Level Order Algo [BFS]
 Use Queue DS
@@ -47,7 +47,7 @@ def levelorder(root):
         print(f"\nLevel {i}")
         q.append(None)
     else:
-      print(curr.data, end="\t")
+      print(curr.data, end=" | ")
       if curr.left != None:
         q.append(curr.left)
       if curr.right != None:
@@ -70,14 +70,16 @@ root.right.right = Node(24)
 root.right.right.left = Node(16)
 root.right.right.right = Node(2)
 
-print("Pre Order [Root, Left, Right]")
-preorder(root)
+if __name__ == "__main__":
 
-print("\nIn Order [Left, Root, Right]")
-inorder(root)
+  print("Pre Order [Root, Left, Right]")
+  preorder(root)
 
-print("\nPost Order [Left, Right, Root]")
-postorder(root)
+  print("\nIn Order [Left, Root, Right]")
+  inorder(root)
 
-print("\nLevel Order [BFS]")
-levelorder(root)
+  print("\nPost Order [Left, Right, Root]")
+  postorder(root)
+
+  print("\nLevel Order [BFS]")
+  levelorder(root)
