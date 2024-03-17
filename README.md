@@ -8,12 +8,9 @@
 | Day 6      | Tree, Traversal | 1                    | Pre, Post, In, Level Order | [Link](./Day%206/) |
 | Day 7      | Height, Leaf node, Top view, Bottom view | 1                    |  | [Link](./Day%207/) |
 | Day 8      | BST | 1                    | Insertion, Searching | [Link](./Day%208/) |
+| Day 9      | AVL | 1                    | Insertion, Searching | [Link](./Day%209/) |
 
-  
-Lectures Missed:  
-- BST [Day 8]
-- AVL Tree [Day 9]
-- None [Day 10]
+Lectures Missed:
 - Graphs [Day 11]
 - Graph Traversal [Day 12]
 
