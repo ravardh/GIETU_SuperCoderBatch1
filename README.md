@@ -10,14 +10,8 @@
 | Day 8      | BST | 1                    | Insertion, Searching | [Link](./Day%208/) |
 | Day 9      | AVL | 1                    | Insertion, Searching | [Link](./Day%209/) |
 | Day 11      | Graphs Theory | 1                    | Graph Data Struture | [Link](./Day%2011/) |
-
-Lectures Missed:
-- Graphs [Day 11]
-- Graph Traversal [Day 12]
-
-| Day Number | Topic Studied          | Total Programs Written | Algorithm Name |   Resources Folder  |
-|------------|------------------------|------------------------|----------------|---------------------|
-| Day 13     | Graph Traversal, LeetCode Ques   | 1 + 2                       | DFS, 2pointer, greedy     | [Link](./Day%2013/) |
+| Day 12      | Graphs Traversal | 1                    | BFS | [Link](./Day%2011/) |
+| Day 13     | Graph Traversal, LeetCode Ques   | 1 + 2                       | DFS, 2pointer, greedy     | [Link](./Day%2011/) |
 | Day 14     | Greedy & DP  | 1                       | 0/1 Knapsack     | [Link](./Day%2014/) |
 | Day 15     | Coding of Knapsack & Dijkstra  | 2                       | 0/1 Knapsack     | - |
 | Day 16     | Minimum path from nth node  | 1                       | Dijkstra Algorithm     | [Link](./Day%2015/) |
