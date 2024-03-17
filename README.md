@@ -9,6 +9,7 @@
 | Day 7      | Height, Leaf node, Top view, Bottom view | 1                    |  | [Link](./Day%207/) |
 | Day 8      | BST | 1                    | Insertion, Searching | [Link](./Day%208/) |
 | Day 9      | AVL | 1                    | Insertion, Searching | [Link](./Day%209/) |
+| Day 11      | Graphs Theory | 1                    | Graph Data Struture | [Link](./Day%2011/) |
 
 Lectures Missed:
 - Graphs [Day 11]
