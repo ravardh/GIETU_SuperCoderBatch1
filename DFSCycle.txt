@@ -1,0 +1,72 @@
+from collections import defaultdict
+
+class Graph:
+    def __init__(self):
+        self.graph = defaultdict(list)
+
+    def add_edge(self, u, v):
+        self.graph[u].append(v)
+        self.graph[v].append(u)
+
+    def is_cyclic_util(self, v, visited, parent):
+        visited[v] = True
+
+        for i in self.graph[v]:
+            if not visited[i]:
+                if self.is_cyclic_util(i, visited, v):
+                    return True
+            elif parent != i:
+                return True
+
+        return False
+
+    def is_cyclic(self):
+        visited = [False] * len(self.graph)
+
+        for i in range(len(self.graph)):
+            if not visited[i]:
+                if self.is_cyclic_util(i, visited, -1):
+                    return True
+
+        return False
+
+
+g = Graph()
+# g.add_edge(0, 1)
+# g.add_edge(1, 2)
+# g.add_edge(2, 0)
+
+g.add_edge(1, 2)
+g.add_edge(2, 1)
+g.add_edge(1, 2)
+g.add_edge(1, 3)
+g.add_edge(1, 10)
+g.add_edge(2, 1)
+g.add_edge(2, 4)
+g.add_edge(3, 1)
+g.add_edge(3, 7)
+g.add_edge(4, 2)
+g.add_edge(4, 5)
+g.add_edge(4, 7)
+g.add_edge(4, 8)
+g.add_edge(5, 4)
+g.add_edge(5, 6)
+g.add_edge(6, 5)
+g.add_edge(6, 10)
+g.add_edge(6, 9)
+g.add_edge(7, 3)
+g.add_edge(7, 4)
+g.add_edge(7, 11)
+g.add_edge(8, 4)
+g.add_edge(8, 9)
+g.add_edge(9, 6)
+g.add_edge(9, 8)
+g.add_edge(10, 1)
+g.add_edge(10, 6)
+g.add_edge(11, 7)
+
+print(graph)
+if g.is_cyclic():
+    print("Graph contains a cycle")
+else:
+    print("Graph does not contain a cycle")
