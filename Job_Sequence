@@ -1,0 +1,22 @@
+arr = [[1,2,20], [2,4,30],[3,3,15],[4,1,12],[5,3,35],[6,4,25],[7,2,5]]
+ 
+n = len(arr)
+
+for i in range(n):
+    for j in range(n-1-i):
+        if arr[j][2]<arr[j+1][2]:
+            arr[j],arr[j+1]=arr[j+1],arr[j]
+      
+visited=[False]*max(job[1] for job in arr)
+
+jobs_sequence=['-1']*len(visited)
+profit = 0
+for i in range(len(arr)):
+    for j in range(arr[i][1],-1,-1):
+        if visited[j-1]==False:
+            jobs_sequence[j-1]=arr[i][0]
+            visited[j-1]=True
+            profit = profit + arr[i][2]
+            break
+print(jobs_sequence)
+print(profit)
