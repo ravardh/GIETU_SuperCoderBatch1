@@ -12,4 +12,6 @@
 ### 02/03/24 - Adjacency list Graph
 ### 03/03/24 - Sunday 
 ### 04/03/24 - BFS
-### 05/03/24 - DFS
+### 05/03/24 & 06/03/24 - DFS
+### 07/03/24 - KnapSack Problem
+### 09/03/24 - Dijkstra : Find shortest path
