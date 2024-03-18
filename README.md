@@ -12,3 +12,4 @@
 ### 02/03/24 - Adjacency list Graph
 ### 03/03/24 - Sunday 
 ### 04/03/24 - BFS
+### 05/03/24 - DFS
