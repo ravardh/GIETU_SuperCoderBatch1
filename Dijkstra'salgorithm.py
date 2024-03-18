@@ -20,28 +20,28 @@ def dijkstra(adj_list, start):
 
         for neighbor, weight in adj_list[min_node]:
             new_distance = distances[min_node] + weight
-            if new_distance < distances.get(neighbor,float('inf')):
+            if new_distance < distances[neighbor]:
                 distances[neighbor] = new_distance
 
     return distances
 
 if __name__ == "__main__":
-   
-     graph = {
-    1: [(2, 4), (8, 8)],
-    2: [(3, 8), (8, 11)],
-    3: [(2, 8), (4, 7), (6, 4), (9, 2)],
-    4: [(3, 7), (5, 9), (6, 14)],
-    5: [(4, 9), (6, 10)],
-    6: [(5, 10), (3, 4), (7, 2)],
-    7: [(6, 2), (9, 6), (8, 1)],
-    8: [(1, 8), (2, 11), (9, 7)],
-    9: [(8, 7), (3, 2), (7, 6)]
-}
+    graph = {
+        0: [(1, 4), (7, 8)],
+        1: [(2, 8), (7, 11)],
+        2: [(1, 8), (3, 7), (5, 4), (8, 2)],
+        3: [(2, 7), (4, 9), (5, 14)],
+        4: [(3, 9), (5, 10)],
+        5: [(4, 10), (3, 4), (6, 2)],
+        6: [(5, 2), (7, 6), (8, 1)],
+        7: [(0, 8), (1, 11), (6, 7)],
+        8: [(2, 2), (6, 1), (9, 7)],
+        9: [(8, 7), (6, 6), (7, 1)]
+    }
 
-     start_node = 0
-     shortest_distances = dijkstra(graph, start_node)
+    start_node = 0
+    shortest_distances = dijkstra(graph, start_node)
 
-     print("Shortest distances from node", start_node)
-     for node, distance in enumerate(shortest_distances):
-        print(f"Node {node}: Distance = {distance}")
+    print("Shortest distances from node", start_node)
+    for node, distance in enumerate(shortest_distances):
+        print(f"Node {node}: Distance={distance}")
