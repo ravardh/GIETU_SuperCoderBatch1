@@ -17,3 +17,4 @@
 | Day 16     | Minimum path from nth node  | 1                       | Dijkstra Algorithm     | [Link](./Day%2015/) |
 | Day 17     | Minimum path from nth node  | 1                       | Bellman Ford Algorithm     | [Link](./Day%2017/) |
 | Day 18     | Cycle Detection, Job Scheduling  | 1 + 2                       | Modified DFS, Greedy     | [Link](./Day%2018/) |
+| Day 19 [code pending]    | MST  | 2                       | Prims & Kruskal Algorithm     | [Link](./Day%2019) |
