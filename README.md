@@ -19,3 +19,4 @@
 | Day 18     | Cycle Detection, Job Scheduling  | 1 + 2                       | Modified DFS, Greedy     | [Link](./Day%2018/) |
 | Day 19 [code pending]    | MST  | 2                       | Prims & Kruskal Algorithm     | [Link](./Day%2019) |
 | Day 20     | N Queen  | 1                       | Recursion & Backtracking     | [Link](./Day%2020/) |
+| Day 22     | Exam  | 2                       | Kadane's Algorithm & In order BST     | [Link](./Day%2021%20[Test]/) |
