@@ -4,11 +4,15 @@ def N_Queen(n):
   negDiag = set() # r - c
   res = []
   board = [["#"] * n for i in range(n)]
-
+  flag = False
   def backtrack(r):
+    nonlocal flag
+    if flag:
+      return
     if r == n:  # valid solution
       temp = ["".join(row) for row in board]
       res.append(temp)
+      flag = True
       return
     
     for c in range(n):
