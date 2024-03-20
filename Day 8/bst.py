@@ -24,10 +24,25 @@ def search(root, key):
 
 if __name__ == "__main__":
     r = root
+    arr = []
+    def inorder(root):
+      if root == None:
+        return
+      inorder(root.left)
+      arr.append(root.data)
+      inorder(root.right)
+    inorder(r)
+    print(*arr)
+    bst = Node(20)
+    for i in arr:
+      bst = insert(bst, i)
+    arr = []
+    inorder(bst)
+    print(*arr)
     # print BST
-    levelorder(r)
+    levelorder(bst)
     print()
-    inorder(r)  # to verify the sorted nature
+    inorder(bst)  # to verify the sorted nature
     print()
-    x = search(r, int(input("Enter Key: ")))
+    x = search(bst, int(input("Enter Key: ")))
     print("Found" if x is not None else "Not Found")
