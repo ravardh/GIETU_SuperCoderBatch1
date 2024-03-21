@@ -25,8 +25,8 @@ def convert(time_str):
   hour, minute = map(int, time_str.split(':'))
   return hour * 60 + minute
 
-if __name__ == "__main__":
-  testcases = {
+def testcases():
+  tc = {
     "1": {
       "start": ['10:00', '10:30', '11:00', '11:30'],
       "end": ['10:30', '11:00', '11:30', '12:00']
@@ -41,5 +41,14 @@ if __name__ == "__main__":
     }
   }
   inp = input("Choose Testcase[1/2/3]: ")
-  print(f"Testcase #{inp}:\Start: {testcases[inp]["start"]}\End: {testcases[inp]["end"]}")
-  
+  print(f"Testcase #{inp}:\Start: {tc[inp]['start']}\End: {tc[inp]['end']}")
+  schedule = [[convert(i), convert(j)] for i,j in zip(tc[inp]["start"], tc[inp]["end"])]
+  print(min_rooms(schedule))
+
+if __name__ == "__main__":
+  testcases()
+  # start = list(map(int, input().strip().split()))
+  # end = list(map(int, input().strip().split()))
+  # schedule = [[convert(i), convert(j)] for i,j in zip(start, end)]
+  # print(min_rooms(schedule))
+  # print()

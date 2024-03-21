@@ -8,11 +8,17 @@ def count_pic(arr):
   return ans
 
 def testcases():
-  arr = [[10, 15, 20, 10, 12], [8, 8, 8, 8], [5, 10, 5, 15, 5, 20], [25, 15, 30, 20, 25]]
-  for i in arr:
-    print(f"{i}: {count_pic(i)}")
+  tc = {
+    "1": [10, 15, 20, 10, 12], 
+    "2": [8, 8, 8, 8], 
+    "3": [5, 10, 5, 15, 5, 20], 
+    "4": [25, 15, 30, 20, 25]
+  }
+  inp = input("Choose Testcase[1/2/3/4]: ")
+  print(f"Testcase #{inp}:\nBuilding Heights: {tc[inp]}\nTotal Pictues: {count_pic(tc[inp])}")
+
 
 if __name__ == "__main__":
-  # testcases()
-  arr = list(map(int, input().strip().split()))
-  print(count_pic(arr))
+  testcases()
+  # arr = list(map(int, input().strip().split()))
+  # print(count_pic(arr))

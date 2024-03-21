@@ -11,11 +11,8 @@ def find_max_profit(l, p):
   # print(*dp)
   return dp[n]
 
-if __name__ == "__main__":
-  # l = list(map(int, input().strip().split()))
-  # p = list(map(int, input().strip().split()))
-  # print(find_max_profit(l, p))
-  testcases = {
+def testcases():
+  tc = {
     "1": {
       "length": [1, 2, 3, 4, 5, 6, 7, 8], 
       "price": [1, 5, 8, 9, 10, 17, 17, 20]
@@ -26,5 +23,11 @@ if __name__ == "__main__":
     }
   }
   inp = input("Choose Testcase[1/2]: ")
-  print(f"Testcase #{inp}:\nLength: {testcases[inp]["start"]}\nPrice: {testcases[inp]["price"]}")
-  print(find_max_profit(testcases[inp]["start"], testcases[inp]["price"]))
+  print(f"Testcase #{inp}:\nLength: {tc[inp]['length']}\nPrice: {tc[inp]['price']}")
+  print(find_max_profit(tc[inp]["length"], tc[inp]["price"]))
+
+if __name__ == "__main__":
+  testcases()
+  # l = list(map(int, input().strip().split()))
+  # p = list(map(int, input().strip().split()))
+  # print(find_max_profit(l, p))
