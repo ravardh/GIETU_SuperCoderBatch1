@@ -10,3 +10,6 @@ More than 1 Minimum Spanning Tree if more than 1 edge exist between any two node
 3. Add the minimum edge weight of both the vertex
 4. Check for cycle visited
 5. Repeat the above till all the vertex are visited
+
+![alt text](image.png)
+![alt text](image-1.png)
